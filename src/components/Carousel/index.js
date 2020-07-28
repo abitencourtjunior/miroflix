@@ -28,7 +28,7 @@ function VideoCardGroup({ ignoreFirstVideo, category }) {
       )}
       <VideoCardList>
         {videos.map((video, index) => {
-          if (ignoreFirstVideo && index === 0) {
+          if (ignoreFirstVideo && index < 0) {
             return null;
           }
 
