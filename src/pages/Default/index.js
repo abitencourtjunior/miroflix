@@ -1,7 +1,7 @@
 import React from "react";
 import Menu from "../../components/Menu";
 import styled from "styled-components";
-import { Footer } from "../../components/Footer";
+import Footer from "../../components/Footer";
 
 export const Main = styled.main`
   background-color: var(--black);

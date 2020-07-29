@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Menu from "../../components/Menu";
 import { Main } from "../Default";
-import { FooterNotFound } from "../../components/Footer";
+import Footer from "../../components/Footer";
 
 const Content = styled(Main)`
   text-align: center;
@@ -22,7 +22,7 @@ const PageNotFound = () => {
     <>
       <Menu />
       <Content>404 Not Found</Content>
-      <FooterNotFound />
+      <Footer />
     </>
   );
 };
