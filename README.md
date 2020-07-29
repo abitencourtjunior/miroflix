@@ -1,12 +1,12 @@
 ## Semana Imersão React - AluraFlix 
 
 <p align="center">
-<img width="150px" src="src/assets/img/logo-alura.svg">
+<img width="150px" src="src/assets/logo-alura.svg">
 </p>
 
 ## ⠀⠀⠀⠀ ⠀⠀⠀⠀
 
-## O projeto ⠀ <img width="90px" src="src/assets/img/Logo.png"> ⠀foi baseado na netflix, porém, compartilhando conteúdo de tecnologia.
+## O projeto ⠀ <img width="90px" src="src/assets/Logo.png"> ⠀foi baseado na netflix, porém, compartilhando conteúdo de tecnologia.
 
 ### [Visualizar projeto](https://miroflix.vercel.app)
 
