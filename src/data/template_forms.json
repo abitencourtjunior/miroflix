@@ -1,0 +1,27 @@
+{
+  "templates": [
+    {
+      "titulo": "Cadastro de Categorias",
+      "fields": [
+        {
+          "label": "Nome da Categoria",
+          "type": "text",
+          "name": "name",
+          "mode": "input"
+        },
+        {
+          "label": "Descrição",
+          "type": "text",
+          "name": "description",
+          "mode": "textarea"
+        },
+        {
+          "label": "Cor",
+          "type": "color",
+          "name": "color",
+          "mode": "input"
+        }
+      ]
+    }
+  ]
+}
