@@ -25,11 +25,9 @@ Após baixar o projeto, acesse ele do seu terminal rode os comandos:
 
 #### Coisas a serem implementadas
 
-- Mudar cores e forma do carrousel de vídeos
+- Mudar forma do carrousel de vídeos
 - Abrir um iframe em um mouse houver
 - Mesclar tanto vídeo e imagem no carrousel
-- Fazer a animação da netflix nos campos do formulário
-- Fazer os estilos
 - Tentar criar um card para mostrar isso com styled components
 
 @Alura

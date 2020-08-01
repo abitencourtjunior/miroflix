@@ -6,8 +6,7 @@
         {
           "label": "Nome da Categoria",
           "type": "text",
-          "name": "name",
-          "mode": "input"
+          "name": "name"
         },
         {
           "label": "Descrição",
@@ -18,8 +17,7 @@
         {
           "label": "Cor",
           "type": "color",
-          "name": "color",
-          "mode": "input"
+          "name": "color"
         }
       ]
     }
