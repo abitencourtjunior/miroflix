@@ -1,7 +1,7 @@
-import React from "react";
-import Menu from "../../components/Menu";
-import styled from "styled-components";
-import Footer from "../../components/Footer";
+import React from 'react'
+import styled, { css } from 'styled-components'
+import Footer from '../../components/Footer'
+import Menu from '../../components/Menu'
 
 export const Main = styled.main`
   background-color: var(--black);
@@ -10,14 +10,17 @@ export const Main = styled.main`
   padding-top: 50px;
   padding-left: 5%;
   padding-right: 5%;
-`;
+  ${({ paddingAll }) => css`
+    padding: ${paddingAll};
+  `}
+`
 
-const PageDefault = ({ children }) => (
+const PageDefault = ({ children, paddingAll }) => (
   <>
     <Menu />
-    <Main>{children}</Main>
+    <Main paddingAll={paddingAll}>{children}</Main>
     <Footer />
   </>
-);
+)
 
-export default PageDefault;
+export default PageDefault

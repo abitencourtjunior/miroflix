@@ -4,21 +4,41 @@
       "titulo": "Cadastro de Categorias",
       "fields": [
         {
-          "label": "Nome da Categoria",
+          "id": "1",
+          "label": "Título da Categoria",
           "type": "text",
-          "name": "name"
+          "name": "title"
         },
         {
+          "id": "2",
           "label": "Descrição",
           "type": "text",
           "name": "description",
           "mode": "textarea"
         },
         {
+          "id": "3",
           "label": "Cor",
           "type": "color",
           "name": "color"
         }
+      ]
+    },
+    {
+      "titulo": "Cadastro de Vídeos",
+      "fields": [
+        {
+          "id": "1",
+          "label": "Título do Vídeo",
+          "type": "text",
+          "name": "title"
+        },{
+          "id": "2",
+          "label": "URL",
+          "type": "text",
+          "name": "url"
+        }
+        
       ]
     }
   ]

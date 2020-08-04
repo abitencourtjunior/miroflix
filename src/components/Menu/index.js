@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Logo from "../../assets/Logo.png";
-import "./Menu.css";
-import Button from "../Button";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Logo from '../../assets/Logo.png'
+import { Button } from '../Button'
+import './Menu.css'
 
 const Menu = ({ button }) => (
   <nav className="Menu">
@@ -15,6 +15,6 @@ const Menu = ({ button }) => (
       </Button>
     )}
   </nav>
-);
+)
 
-export default Menu;
+export default Menu

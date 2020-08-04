@@ -2,46 +2,38 @@
 
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import Button from '../../../components/Button'
+import { CustomButton } from '../../../components/Button'
 import FormField from '../../../components/FormField'
 import templateForm from '../../../data/template_forms.json'
+import useForm from '../../../hooks/useForm'
+import categoryRepository from '../../../repository/categoryRepository'
 import PageDefault from '../../Default'
 
 function FormCategory() {
   const initialValues = {
-    name: '',
+    title: '',
     description: '',
     color: '',
   }
+
+  const {
+    values,
+    handleChange,
+    clearForm,
+  } = useForm(initialValues)
+
   const [categorys, setCategorys] = useState([])
-  const [category, setCategory] = useState(initialValues)
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setCategorys([...categorys, category])
-    setCategory(initialValues)
-  }
-
-  const setValueInCategory = (key, value) => {
-    setCategory({
-      ...category, [key]: value,
-    })
-  }
-
-  const handleChange = (e) => {
-    setValueInCategory(e.target.getAttribute('name'), e.target.value)
+    setCategorys([...categorys, values])
+    clearForm()
   }
 
   useEffect(() => {
-    const URL = window.location.href.includes('localhost') ? 'http://localhost:8080/categorias' : 'https://miroflix.herokuapp.com/categorias'
-    fetch(URL)
-      .then(async (response) => {
-        if (response.ok) {
-          const data = await response.json()
-          setCategorys(data)
-          return
-        }
-        throw new Error('Não foi possível pegar os dados')
+    categoryRepository.showCategorys()
+      .then((categorysData) => {
+        setCategorys(categorysData)
       })
   }, [])
 
@@ -51,14 +43,14 @@ function FormCategory() {
         {templateForm.templates[0].titulo}
         :
         {' '}
-        {category.name}
+        {values.title}
       </h1>
       <form onSubmit={handleSubmit}>
-        {templateForm.templates[0].fields.map((field, index) => (
+        {templateForm.templates[0].fields.map((field) => (
           <FormField
-            key={`${field.name}${index}`}
+            key={field.id}
             label={field.label}
-            value={eval(`category.${field.name}`)}
+            value={eval(`values.${field.name}`)}
             onChange={handleChange}
             type={field.type}
             name={field.name}
@@ -67,10 +59,10 @@ function FormCategory() {
         ))}
 
         <ul>
-          {categorys.map((category, index) => <li key={`${category.name}${index}`}>{category.name}</li>)}
+          {categorys.map((categoryCurrent) => <li key={categoryCurrent.id}>{categoryCurrent.title}</li>)}
         </ul>
 
-        <Button>Cadastrar</Button>
+        <CustomButton>Cadastrar</CustomButton>
       </form>
       <Link to="/">Home</Link>
     </PageDefault>

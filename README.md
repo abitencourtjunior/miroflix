@@ -29,5 +29,8 @@ Após baixar o projeto, acesse ele do seu terminal rode os comandos:
 - Abrir um iframe em um mouse houver
 - Mesclar tanto vídeo e imagem no carrousel
 - Tentar criar um card para mostrar isso com styled components
+- Terminar crud no category
+- Aplicar validações
+- Tratar alguns erros de request
 
 @Alura
