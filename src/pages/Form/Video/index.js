@@ -1,9 +1,10 @@
 /* eslint no-eval: 0 */
 
 import React, { useEffect, useState } from 'react'
-import { Link, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { CustomButton } from '../../../components/Button'
 import FormField from '../../../components/FormField'
+import Menu from '../../../components/Menu'
 import templateForm from '../../../data/template_forms.json'
 import useForm from '../../../hooks/useForm'
 import categoryRepository from '../../../repository/categoryRepository'
@@ -41,6 +42,7 @@ function FormVideo() {
 
   return (
     <PageDefault>
+      <Menu button path="/create/category" nameButton="Nova Categoria" />
       <h1>
         {templateForm.templates[1].titulo}
         :
@@ -68,10 +70,8 @@ function FormVideo() {
           suggestions={categoryTitles}
         />
 
-        <CustomButton type="submit">Submit</CustomButton>
+        <CustomButton type="submit">Cadastrar</CustomButton>
       </form>
-
-      <Link to="/create/category">Cadastrar Categoria</Link>
     </PageDefault>
   )
 }

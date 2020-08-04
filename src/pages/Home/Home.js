@@ -15,7 +15,7 @@ function Home() {
   }, [])
   return (
     <PageDefault paddingAll={0}>
-      <Menu button />
+      <Menu button path="/create/video" nameButton="Novo Video" />
 
       {dadosIniciais.length === 0 && (<div>Loading ....</div>)}
 

@@ -20,7 +20,26 @@ const showCategorys = () => fetch(URL_CATEGORY)
     throw new Error('No data')
   })
 
+function create(objectVideo) {
+  return fetch(URL_CATEGORY, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify(objectVideo),
+  })
+    .then(async (responseServer) => {
+      if (responseServer.ok) {
+        const resposta = await responseServer.json()
+        return resposta
+      }
+
+      throw new Error('Não foi possível cadastrar os dados :(')
+    })
+}
+
 export default {
   showCategorys,
   showCategorysWithVideos,
+  create,
 }

@@ -4,14 +4,14 @@ import Logo from '../../assets/Logo.png'
 import { Button } from '../Button'
 import './Menu.css'
 
-const Menu = ({ button }) => (
+const Menu = ({ button, path, nameButton }) => (
   <nav className="Menu">
     <Link to="/">
       <img className="Logo" src={Logo} alt="Miroflix Logo" />
     </Link>
     {button && (
-      <Button as={Link} className="ButtonLink" to="/create/video">
-        Novo Vídeo
+      <Button as={Link} className="ButtonLink" to={path}>
+        {nameButton}
       </Button>
     )}
   </nav>

@@ -1,7 +1,7 @@
 /* eslint no-eval: 0 */
 
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { CustomButton } from '../../../components/Button'
 import FormField from '../../../components/FormField'
 import templateForm from '../../../data/template_forms.json'
@@ -10,6 +10,7 @@ import categoryRepository from '../../../repository/categoryRepository'
 import PageDefault from '../../Default'
 
 function FormCategory() {
+  const history = useHistory()
   const initialValues = {
     title: '',
     description: '',
@@ -27,6 +28,17 @@ function FormCategory() {
   const handleSubmit = (e) => {
     e.preventDefault()
     setCategorys([...categorys, values])
+
+    categoryRepository.create({
+      title: values.title,
+      color: values.color,
+      link_extra: {
+        text: values.description,
+      },
+    })
+      .then(() => {
+        history.push('/create/video')
+      })
     clearForm()
   }
 
@@ -58,13 +70,12 @@ function FormCategory() {
           />
         ))}
 
-        <ul>
-          {categorys.map((categoryCurrent) => <li key={categoryCurrent.id}>{categoryCurrent.title}</li>)}
-        </ul>
-
         <CustomButton>Cadastrar</CustomButton>
       </form>
-      <Link to="/">Home</Link>
+
+      <ul>
+        {categorys.map((categoryCurrent) => <li key={categoryCurrent.id}>{categoryCurrent.title}</li>)}
+      </ul>
     </PageDefault>
   )
 }

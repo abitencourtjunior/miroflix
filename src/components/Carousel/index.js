@@ -4,39 +4,36 @@ import VideoCard from './components/VideoCard'
 import { ExtraLink, Title, VideoCardGroupContainer } from './styles'
 
 function Carousel({
-  ignoreFirstVideo, category,
+  ignoreFirstVideo,
+  category,
 }) {
   const categoryTitle = category.title
   const categoryColor = category.color
   const categoryExtraLink = category.link_extra
-  const {
-    videos,
-  } = category
+  const { videos } = category
   return (
     <VideoCardGroupContainer>
       {categoryTitle && (
         <>
-          <Title style={{
-            backgroundColor: categoryColor || 'red',
-          }}
-          >
+          <Title style={{ backgroundColor: categoryColor || 'red' }}>
             {categoryTitle}
           </Title>
-          {categoryExtraLink && (
+          {categoryExtraLink
+            && (
             <ExtraLink href={categoryExtraLink.url} target="_blank">
               {categoryExtraLink.text}
             </ExtraLink>
-          )}
+            )}
         </>
       )}
-      <Slider color={categoryColor}>
+      <Slider>
         {videos.map((video, index) => {
           if (ignoreFirstVideo && index === 0) {
             return null
           }
 
           return (
-            <SliderItem key={video.id}>
+            <SliderItem key={video.titulo}>
               <VideoCard
                 videoTitle={video.titulo}
                 videoURL={video.url}

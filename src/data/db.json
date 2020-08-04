@@ -40,6 +40,14 @@
         "text": "Formação de Jogos na Alura",
         "url": "https://www.alura.com.br/cursos-online-front-end"
       }
+    },
+    {
+      "title": "Musica Clássica",
+      "color": "#00ffff",
+      "link_extra": {
+        "text": "Cello Music"
+      },
+      "id": 6
     }
   ],
   "videos": [
@@ -186,6 +194,60 @@
       "categoryId": 5,
       "title": "Resident Evil 8",
       "url": "https://www.youtube.com/watch?v=JSapXD9vxYA"
+    },
+    {
+      "title": "Old piano adventure - the saloon sound",
+      "url": "https://www.youtube.com/watch?v=je0G_Gn3xac",
+      "categoryId": 6,
+      "id": 25
+    },
+    {
+      "title": "https://www.youtube.com/watch?v=ykSILAQQu6o",
+      "url": "https://www.youtube.com/watch?v=ykSILAQQu6o",
+      "categoryId": 3,
+      "id": 26
+    },
+    {
+      "title": "Qual a diferença entre Inteligência Artificial, Machine Learning, Data Science, Deep Learning, etc?",
+      "url": "https://www.youtube.com/watch?v=ccZ2pyr3YDw",
+      "categoryId": 3,
+      "id": 27
+    },
+    {
+      "title": "A Vida de Mozart - Filme Completo",
+      "url": "https://www.youtube.com/watch?v=qA1dgBq5qYE",
+      "categoryId": 4,
+      "id": 28
+    },
+    {
+      "title": "O FUTURO DOS GAMES!? - Minecraft RTX",
+      "url": "https://www.youtube.com/watch?v=TMlQMFR8s1M",
+      "categoryId": 5,
+      "id": 29
+    },
+    {
+      "title": "Yo-Yo Ma - Bach: Cello Suite No. 3 in C Major, Bourrée I and II",
+      "url": "https://www.youtube.com/watch?v=xR4IElye7eg",
+      "categoryId": 6,
+      "id": 30
+    },
+    {
+      "title": "W.H.SQUIRE: Bourrée opus 24 for cello and piano # Ne ratez pas la fin !",
+      "url": "https://www.youtube.com/watch?v=LnDOmr_IVRk",
+      "categoryId": 6,
+      "id": 31
+    },
+    {
+      "title": "DAVID GARRETT: ♫ Capriccio No. 24 ♫ von N. Paganini",
+      "url": "https://www.youtube.com/watch?v=qVrkc6zRzEE",
+      "categoryId": 6,
+      "id": 32
+    },
+    {
+      "title": "Way Lee - Paganini Caprice No. 24 (1975 Manuel Velazquez)",
+      "url": "https://www.youtube.com/watch?v=fy4_KzSd28o",
+      "categoryId": 6,
+      "id": 33
     }
   ]
 }
